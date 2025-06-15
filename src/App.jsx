@@ -1,10 +1,15 @@
+import { Outlet } from "react-router-dom"
+import Naver from "./componet/home/Naver"
+import Footer from "./componet/home/Footer"
 
 
 function App() {
 
   return (
     <>
-       <div className="text-5xl">data is </div>
+      <Naver />
+      <Outlet />
+      <Footer />
     </>
   )
 }
