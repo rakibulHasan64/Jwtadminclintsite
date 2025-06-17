@@ -1,17 +1,19 @@
+
+
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
+import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD8gnLsDxBipOq3JSBlwGqYL6Z3FvuyPeA",
-  authDomain: "carebsite.firebaseapp.com",
-  projectId: "carebsite",
-  storageBucket: "carebsite.firebasestorage.app",
-  messagingSenderId: "282661348016",
-  appId: "1:282661348016:web:381e5b990c8c7ccd5b1175"
+  apiKey: "AIzaSyCGvXa8p9_AwBkaBrMzPqb3GfIBNe4oe68",
+  authDomain: "cars-1925d.firebaseapp.com",
+  projectId: "cars-1925d",
+  storageBucket: "cars-1925d.firebasestorage.app",
+  messagingSenderId: "1079031932750",
+  appId: "1:1079031932750:web:5cef736caade45f350e01f"
 };
 
 // Initialize Firebase
