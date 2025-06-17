@@ -7,6 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { toast } from "react-toastify";
 import useAuth from "../provider/useAuth";
 import Loddinge from "../provider/Loddinge";
+import axiosSecure from "../../hooks/axiosSecure";
 
 Modal.setAppElement("#root");
 
@@ -23,8 +24,8 @@ function MyBooking() {
 
   const fetchBookings = () => {
     setLoading(true);
-    axios
-      .get(`https://servercar.vercel.app/mybookinge?email=${userEmail}`)
+    axiosSecure
+      .get(`/mybookinge?email=${userEmail}`)
       .then((res) => setBookings(res.data))
       .catch(() => toast.error("Failed to load bookings"))
       .finally(() => setLoading(false));

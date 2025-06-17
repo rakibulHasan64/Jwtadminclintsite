@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import useAuth from '../provider/useAuth';
 import axios from 'axios';
 import Loddinge from '../provider/Loddinge';
+import axiosSecure from '../../hooks/axiosSecure';
 
 Modal.setAppElement('#root');
 
@@ -16,7 +17,7 @@ function MyCars() {
 
    const fetchCars = async (email) => {
       try {
-         const res = await axios.get(`https://servercar.vercel.app/caruser/email?email=${email}`);
+         const res = await axiosSecure.get(`caruser/email?email=${email}`);
          const data = res.data;
 
          if (Array.isArray(data)) {
