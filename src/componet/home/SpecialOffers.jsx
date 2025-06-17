@@ -9,21 +9,21 @@ const offers = [
       title: "15% Off for Weekend Rentals!",
       description: "Special discount on any car booking from Friday to Sunday.",
       buttonText: "Book Now",
-      image: "/two.png",
+      image: "https://i.ibb.co/JRB7GhZt/two.jpg",
    },
    {
       id: 2,
       title: "Luxury Cars at Just $99/Day This Holiday Season!",
       description: "Rent premium cars at amazing prices during the holidays.",
       buttonText: "Learn More",
-      image: "/three.png",
+      image: "https://i.ibb.co/nK27crK/one.jpg",
    },
    {
       id: 3,
       title: "Family Package Discount!",
       description: "Extra benefits and discounts for family trips.",
       buttonText: "See Details",
-      image: "/one.png",
+      image: "https://i.ibb.co/B2TfYRGt/three.jpg",
    },
 ];
 
