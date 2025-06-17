@@ -62,11 +62,11 @@ function DetlisPage() {
       };
 
       try {
-         const res = await axios.post("http://localhost:5000/bookings", bookingData);
+         const res = await axios.post("https://servercar.vercel.app/bookings", bookingData);
 
          if (res.data.insertedId) {
             // Booking successful - increment bookingCount for this car
-            await axios.put(`http://localhost:5000/cars/increment-booking/${_id}`);
+            await axios.put(`https://servercar.vercel.app/cars/increment-booking/${_id}`);
 
             // Update local state so UI reflects new booking count immediately
             setBookingCountState(prev => prev + 1);

@@ -16,7 +16,7 @@ function MyCars() {
 
    const fetchCars = async (email) => {
       try {
-         const res = await axios.get(`http://localhost:5000/caruser/email?email=${email}`);
+         const res = await axios.get(`https://servercar.vercel.app/caruser/email?email=${email}`);
          const data = res.data;
 
          if (Array.isArray(data)) {
@@ -53,7 +53,7 @@ function MyCars() {
       const { _id, ...carWithoutId } = editingCar;
 
       try {
-         await axios.put(`http://localhost:5000/updatecar/${_id}`, carWithoutId);
+         await axios.put(`https://servercar.vercel.app/updatecar/${_id}`, carWithoutId);
          toast.success('Car updated successfully');
          closeModal();
          fetchCars(user.email);
@@ -66,7 +66,7 @@ function MyCars() {
    const handleDelete = async (id) => {
       if (confirm('Are you sure you want to delete this car?')) {
          try {
-            await axios.delete(`http://localhost:5000/deletecar/${id}`);
+            await axios.delete(`https://servercar.vercel.app/deletecar/${id}`);
             toast.success('Car deleted successfully');
             fetchCars(user?.email);
          } catch (err) {

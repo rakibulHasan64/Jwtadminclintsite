@@ -24,7 +24,7 @@ function MyBooking() {
   const fetchBookings = () => {
     setLoading(true);
     axios
-      .get(`http://localhost:5000/mybookinge?email=${userEmail}`)
+      .get(`https://servercar.vercel.app/mybookinge?email=${userEmail}`)
       .then((res) => setBookings(res.data))
       .catch(() => toast.error("Failed to load bookings"))
       .finally(() => setLoading(false));
@@ -41,7 +41,7 @@ function MyBooking() {
 
   const confirmCancel = () => {
     axios
-      .put(`http://localhost:5000/bookings/cancel/${selectedBooking._id}`)
+      .put(`https://servercar.vercel.app/bookings/cancel/${selectedBooking._id}`)
       .then(() => {
         toast.success("Booking canceled");
         fetchBookings();
@@ -64,7 +64,7 @@ function MyBooking() {
     }
 
     axios
-      .put(`http://localhost:5000/bookings/modify/${selectedBooking._id}`, {
+      .put(`https://servercar.vercel.app/bookings/modify/${selectedBooking._id}`, {
         startDate: newStartDate,
         endDate: newEndDate,
       })
@@ -81,7 +81,7 @@ function MyBooking() {
     const start = new Date(booking.startDate);
     const end = new Date(booking.endDate);
     const diffTime = end - start;
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; 
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
     return booking.pricePerDay * diffDays;
   };
 
@@ -217,7 +217,7 @@ function MyBooking() {
             />
           </div>
 
-        
+
         </div>
         <div className="flex justify-end mt-6 space-x-4">
           <button

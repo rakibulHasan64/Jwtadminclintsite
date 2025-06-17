@@ -35,11 +35,11 @@ const AddCar = () => {
          bookingStatus: 'available'
       };
 
-      
-      
+
+
 
       try {
-         const res = await axios.post("http://localhost:5000/car", newCar, {
+         const res = await axios.post("https://servercar.vercel.app/car", newCar, {
             headers: {
                "Content-Type": "application/json",
             },
@@ -50,7 +50,7 @@ const AddCar = () => {
          }
       } catch (error) {
          Swal.fire("Error", "Something went wrong!", "error");
-       }
+      }
    };
 
    return (

@@ -23,12 +23,12 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-    
+
       {
         path: "/",
         index: true,
         element: <HomeLayout />
-      
+
       },
 
       {
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: "/my-cars",
         element: <PriverRoute><MyCars /></PriverRoute>
-        
+
 
       },
       {
@@ -52,17 +52,17 @@ const router = createBrowserRouter([
         path: "/detlis/:id",
         element: <PriverRoute><DetlisPage /></PriverRoute>,
         loader: async ({ params }) => {
-          const res = await fetch(`http://localhost:5000/cardetlis/${params.id}`);
+          const res = await fetch(`https://servercar.vercel.app/cardetlis/${params.id}`);
           return res.json();
         },
       },
-      
+
 
       {
 
         path: "/addcar",
         element: <PriverRoute><AddCar /></PriverRoute>
-         
+
       },
 
 
@@ -75,16 +75,16 @@ const router = createBrowserRouter([
         path: "/regsiter",
         element: <Regsiter />
       }
-      
+
     ],
-  
-    
+
+
   },
   {
     path: "*",
     element: <ErrorPage />,
   }
-  
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

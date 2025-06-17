@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://servercar.vercel.app",
 });
 
 export const getAvailableCars = async (sortBy = "date", order = "desc") => {
