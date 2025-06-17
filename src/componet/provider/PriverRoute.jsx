@@ -4,10 +4,10 @@ import useAuth from './useAuth';
 import Loddinge from './Loddinge';
 
 function PriverRoute({ children }) {
-   const { user, lodinge } = useAuth();
+   const { user, loading } = useAuth();
    const location = useLocation();
 
-   if (lodinge) {
+   if (loading) {
       return <Loddinge />; 
    }
 
